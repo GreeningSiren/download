@@ -14,12 +14,12 @@ function App() {
     const handleSubmit = async (isAudioOnly: boolean, endpointUrl: string) => {
         if (!inputValue.trim()) {
             setErrorText("❌ERROR❌<br><br>❗Please enter a URL❗");
-            setTimeout(() => {setErrorText(null)},2500)
+            setTimeout(() => {setErrorText(null)},2000)
             return;
         }
         if (!inputValue.trim().startsWith('https://')) {
         setErrorText("❌ERROR❌<br><br>❗URL must start with 'https://'❗");
-            setTimeout(() => {setErrorText(null)}, 2500)
+            setTimeout(() => {setErrorText(null)}, 2000)
             return;
         }
         try {
@@ -61,7 +61,6 @@ function App() {
                 type="search"
                 value={inputValue}
                 onChange={(e) => setInputValue(e.target.value)}
-                autoFocus
                 placeholder="Enter URL here:"
             />
             <button type="submit" onClick={() => handleSubmit(false,apiUrl)}>Download Video</button>
