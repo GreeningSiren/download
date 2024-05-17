@@ -2,6 +2,7 @@ import {ReactNode, useState} from 'react';
 import axios from 'axios';
 // import MessageModal from "./components/Modal.tsx";
 // import Modal from "./components/Modal.tsx";
+// import SupportedServeices from "./components/Supported.tsx";
 
 function App() {
     const [inputValue, setInputValue] = useState('');
@@ -74,6 +75,7 @@ function App() {
                 <h5 className="success" dangerouslySetInnerHTML={{__html: SuccessText}}></h5>
                 // <Modal title="SUCCESS">SIGMA</Modal>
             }
+            {/*<SupportedServeices></SupportedServeices>*/}
         </div>
     );
 }
