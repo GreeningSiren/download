@@ -1,5 +1,6 @@
 import {ReactNode, useState} from 'react';
 import axios from 'axios';
+// import Modal from "./components/Modal.tsx";
 
 // import Modal from './components/Modal';
 
@@ -68,9 +69,11 @@ function App() {
             {/*{responseUrl && <p>Response URL: {responseUrl}</p>}*/}
             {ErrorText != null &&
             <h5 className="error" dangerouslySetInnerHTML={{__html: ErrorText}}></h5>
+            //     <Modal title="ERROR">ASD</Modal>
             }
             {SuccessText != null &&
                 <h5 className="success" dangerouslySetInnerHTML={{__html: SuccessText}}></h5>
+                // <Modal title="SUCCESS">SIGMA</Modal>
             }
         </div>
     );

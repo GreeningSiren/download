@@ -1,8 +1,8 @@
 import {ReactNode} from "react";
 
 interface ModalProps{
-    title: string
-    children: ReactNode
+    title: string;
+    children: ReactNode;
 }
 
 export default function Modal({title,children}:ModalProps) {
