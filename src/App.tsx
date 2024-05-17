@@ -1,8 +1,7 @@
 import {ReactNode, useState} from 'react';
 import axios from 'axios';
+// import MessageModal from "./components/Modal.tsx";
 // import Modal from "./components/Modal.tsx";
-
-// import Modal from './components/Modal';
 
 function App() {
     const [inputValue, setInputValue] = useState('');
@@ -69,7 +68,7 @@ function App() {
             {/*{responseUrl && <p>Response URL: {responseUrl}</p>}*/}
             {ErrorText != null &&
             <h5 className="error" dangerouslySetInnerHTML={{__html: ErrorText}}></h5>
-            //     <Modal title="ERROR">ASD</Modal>
+            //     <MessageModal title="ERROR" text={<div dangerouslySetInnerHTML={{__html: ErrorText}}></div>} />
             }
             {SuccessText != null &&
                 <h5 className="success" dangerouslySetInnerHTML={{__html: SuccessText}}></h5>
