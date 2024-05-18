@@ -54,6 +54,7 @@ function App() {
                 // @ts-expect-error Cuz error is bad ;(
                 setErrorText("❌ERROR❌ <br><br>"+error.response.data.text + "<br><br> ❌Alternate Server Failed!❌");
                 setInputValue('');
+                setTimeout(() => {setErrorText(null)}, 2000)
             }
         }
     }
