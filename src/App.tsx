@@ -1,14 +1,14 @@
-import {ReactNode, useState} from 'react';
+import { useState } from 'react';
 import axios from 'axios';
 // import MessageModal from "./components/Modal.tsx";
 // import Modal from "./components/Modal.tsx";
 // import SupportedServeices from "./components/Supported.tsx";
-
+import HTMLReactParser from 'html-react-parser';
 function App() {
     const [inputValue, setInputValue] = useState('');
     // const [responseUrl, setResponseUrl] = useState('');
-    const [ErrorText, setErrorText] = useState<ReactNode | null>(null);
-    const [SuccessText,setSuccessText] = useState<ReactNode | null>(null);
+    const [ErrorText, setErrorText] = useState<string | null>(null);
+    const [SuccessText,setSuccessText] = useState<string | null>(null);
     const apiUrl = 'https://co.wuk.sh/api/json';
     const alternativeApiUrl = 'https://cobalt.canine.tools/api/json';
     // let url = apiUrl
@@ -54,7 +54,7 @@ function App() {
                 // @ts-expect-error Cuz error is bad ;(
                 setErrorText("❌ERROR❌ <br><br>"+error.response.data.text + "<br><br> ❌Alternate Server Failed!❌");
                 setInputValue('');
-                setTimeout(() => {setErrorText(null)}, 2000)
+                setTimeout(() => {setErrorText(null)}, 2500)
             }
         }
     }
@@ -72,11 +72,11 @@ function App() {
             <button type="submit" onClick={() => handleSubmit(true,apiUrl)}>Download Audio</button>
             {/*{responseUrl && <p>Response URL: {responseUrl}</p>}*/}
             {ErrorText != null &&
-            <h5 className="error" dangerouslySetInnerHTML={{__html: ErrorText}}></h5>
+            <h5 className="error">{HTMLReactParser(ErrorText)}</h5>
             //     <MessageModal title="ERROR" text={<div dangerouslySetInnerHTML={{__html: ErrorText}}></div>} />
             }
             {SuccessText != null &&
-                <h5 className="success" dangerouslySetInnerHTML={{__html: SuccessText}}></h5>
+                <h5 className="success">{HTMLReactParser(SuccessText)}</h5>
                 // <Modal title="SUCCESS">SIGMA</Modal>
             }
             {/*<SupportedServeices></SupportedServeices>*/}
