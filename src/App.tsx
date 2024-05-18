@@ -20,6 +20,7 @@ function App() {
         }
         if (!inputValue.trim().startsWith('https://')) {
         setErrorText("❌ERROR❌<br><br>❗URL must start with 'https://'❗");
+            setInputValue('')
             setTimeout(() => {setErrorText(null)}, 2000)
             return;
         }
@@ -38,6 +39,7 @@ function App() {
             const ResponseUrl = response.data.url;
             setSuccessText("✅Success✅<br><br>Download should start shortly!")
             setTimeout(() => {window.open(ResponseUrl, '_self')}, 1200); // Open the URL in a new tab if not downloading audio
+            setInputValue('');
             setTimeout(() => {setSuccessText(null)}, 2000)
         } catch (error) {
             // console.error('Error:', error);
@@ -51,6 +53,7 @@ function App() {
             }else{
                 // @ts-expect-error Cuz error is bad ;(
                 setErrorText("❌ERROR❌ <br><br>"+error.response.data.text + "<br><br> ❌Alternate Server Failed!❌");
+                setInputValue('');
             }
         }
     }
