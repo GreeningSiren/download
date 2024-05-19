@@ -4,6 +4,7 @@ import axios from 'axios';
 // import Modal from "./components/Modal.tsx";
 // import SupportedServeices from "./components/Supported.tsx";
 import HTMLReactParser from 'html-react-parser';
+import {Link} from "react-router-dom";
 // import {Link} from "react-router-dom";
 function App() {
     const [inputValue, setInputValue] = useState('');
@@ -72,16 +73,16 @@ function App() {
             />
             <button type="submit" onClick={() => handleSubmit(false,apiUrl)}>Download Video</button>
             <button type="submit" onClick={() => handleSubmit(true,apiUrl)}>Download Audio</button>
-            {/*{responseUrl && <p>Response URL: {responseUrl}</p>}*/}
+            {ErrorText === null && SuccessText === null ?
+            <><br/><br/><Link to={'/download/supported/'} style={{textDecoration:"none", color:"#05dcaa",fontSize:'20px'}}>See Supported Services</Link></>
+            : null}
+
             {ErrorText != null &&
             <h5 className="error">{HTMLReactParser(ErrorText)}</h5>
-            //     <MessageModal title="ERROR" text={<div dangerouslySetInnerHTML={{__html: ErrorText}}></div>} />
             }
             {SuccessText != null &&
                 <h5 className="success">{HTMLReactParser(SuccessText)}</h5>
-                // <Modal title="SUCCESS">SIGMA</Modal>
             }
-            {/*<SupportedServeices></SupportedServeices>*/}
         </div>
     );
 }
