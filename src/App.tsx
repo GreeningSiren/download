@@ -48,13 +48,13 @@ function App() {
             setSuccessText(null)
             if (endpointUrl === apiUrl) {
                 // @ts-expect-error Cuz error is bad ;(
-                setErrorText("❌ERROR❌ <br><br>"+error.response.data.text + "<br><br> 🔁Trying Alternate Server!🔁");
+                setErrorText(`❌ERROR❌ <br><br> ${error.response.data.text} <br><br> 🔁Trying Alternate Server!🔁`);
                 // console.log(error.response.data.text);
                 setTimeout(async () => {await handleSubmit(isAudioOnly,alternativeApiUrl)},2500)
                 // await handleSubmit(isAudioOnly, alternativeApiUrl);
             }else{
                 // @ts-expect-error Cuz error is bad ;(
-                setErrorText("❌ERROR❌ <br><br>"+error.response.data.text + "<br><br> ❌Alternate Server Failed!❌");
+                setErrorText(`❌ERROR❌ <br><br> ${error.response.data.text} <br><br> ❌Alternate Server Failed!❌`);
                 setInputValue('');
                 setTimeout(() => {setErrorText(null)}, 2500)
             }
@@ -77,10 +77,10 @@ function App() {
             <><br/><br/><Link to={'/download/supported/'} style={{textDecoration:"underline", color:"#05dcaa",fontSize:'20px'}}>See Supported Services</Link></>
             : null}
 
-            {ErrorText != null &&
+            {ErrorText !== null &&
             <h5 className="error">{HTMLReactParser(ErrorText)}</h5>
             }
-            {SuccessText != null &&
+            {SuccessText !== null &&
                 <h5 className="success">{HTMLReactParser(SuccessText)}</h5>
             }
         </div>
