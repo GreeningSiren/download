@@ -11,9 +11,12 @@ import ErrorElement from "./components/ErrorElement.tsx";
 
 const router = createBrowserRouter([
     {
+        path:'/',
+        errorElement: <ErrorElement/>
+    },
+    {
         path: '/download/',
         element: <App />,
-        errorElement: <ErrorElement />,
     },
     {
         path: '/download/supported/',

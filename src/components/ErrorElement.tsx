@@ -3,8 +3,8 @@ import {Link} from "react-router-dom";
 export default function ErrorElement() {
     return (
         <>
-            <div>ERROR 404! PAGE NOT FOUND</div>
-            <Link to={'/download/'}>Go Home</Link>
+            <h1>❗ ERROR 404 ❗ PAGE NOT FOUND ❗</h1>
+            <Link to={'/download/'} style={{fontSize:"40px", textDecoration:"none", color:"#05dcaa"}}>Go Home</Link>
         </>
     )
 }
