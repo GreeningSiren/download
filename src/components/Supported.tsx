@@ -1,5 +1,6 @@
 import ReactMarkdown from 'react-markdown'
 import remarkGfm from "remark-gfm";
+import {Link} from "react-router-dom";
 
 const markdown = "## supported services\n" +
     "\n" +
@@ -30,10 +31,11 @@ const markdown = "## supported services\n" +
     "|   ➖   | impossible/unreasonable |\n" +
     "|   ❌   | not supported           |"
 
-const tableStyles = 'th, td{background-color:#202020;color:white;}'
+const tableStyles = 'th, td{background-color:#242424;color:whitesmoke;}'
 export default function SupportedServices() {
     return (
         <>
+            <Link to={'/download/'} style={{textDecoration: "none", color: "#05dcaa"}} >Go Home</Link>
             <style>{tableStyles}</style>
             <ReactMarkdown remarkPlugins={[remarkGfm]}>{markdown}</ReactMarkdown>
         </>

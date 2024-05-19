@@ -4,6 +4,7 @@ import axios from 'axios';
 // import Modal from "./components/Modal.tsx";
 // import SupportedServeices from "./components/Supported.tsx";
 import HTMLReactParser from 'html-react-parser';
+// import {Link} from "react-router-dom";
 function App() {
     const [inputValue, setInputValue] = useState('');
     // const [responseUrl, setResponseUrl] = useState('');
@@ -60,6 +61,7 @@ function App() {
     }
     return (
         <div>
+            {/*<Link to={'/download/supported/'} style={{textDecoration: "none", color: "#05dcaa"}}>See Supported Services</Link>*/}
             <h2>GreeningSiren&apos;s</h2>
             <h1>Download Center</h1>
             <input
