@@ -35,7 +35,7 @@ const tableStyles = 'th, td{background-color:#242424;color:whitesmoke;}'
 export default function SupportedServices() {
     return (
         <>
-            <Link to={'/download/'} style={{textDecoration: "none", color: "#05dcaa"}} >Go Home</Link>
+            <Link to={'/download/'} style={{textDecoration: "underline", color: "#05dcaa"}} >Go Home</Link>
             <style>{tableStyles}</style>
             <ReactMarkdown remarkPlugins={[remarkGfm]}>{markdown}</ReactMarkdown>
         </>

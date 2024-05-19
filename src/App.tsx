@@ -74,7 +74,7 @@ function App() {
             <button type="submit" onClick={() => handleSubmit(false,apiUrl)}>Download Video</button>
             <button type="submit" onClick={() => handleSubmit(true,apiUrl)}>Download Audio</button>
             {ErrorText === null && SuccessText === null ?
-            <><br/><br/><Link to={'/download/supported/'} style={{textDecoration:"none", color:"#05dcaa",fontSize:'20px'}}>See Supported Services</Link></>
+            <><br/><br/><Link to={'/download/supported/'} style={{textDecoration:"underline", color:"#05dcaa",fontSize:'20px'}}>See Supported Services</Link></>
             : null}
 
             {ErrorText != null &&
