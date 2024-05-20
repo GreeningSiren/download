@@ -66,10 +66,11 @@ function App() {
             <h2>GreeningSiren&apos;s</h2>
             <h1>Download Center</h1>
             <input
-                type="search"
+                type="url"
                 value={inputValue}
                 onChange={(e) => setInputValue(e.target.value)}
                 placeholder="Enter URL here:"
+                name="url"
             />
             <button type="submit" onClick={() => handleSubmit(false,apiUrl)}>Download Video</button>
             <button type="submit" onClick={() => handleSubmit(true,apiUrl)}>Download Audio</button>
