@@ -1,4 +1,5 @@
 ### GreeningSiren's
+
 # [DOWNLOAD CENTER](https://greeningsiren.github.io/download/)
 
 ## supported services
@@ -7,8 +8,7 @@
 |:-------------------------------|:-------------:|:----------:|:----------:|:--------:|:---------------:|
 | bilibili.com & bilibili.tv     |       ✅       |     ✅      |     ✅      |    ➖     |        ➖        |
 | dailymotion                    |       ✅       |     ✅      |     ✅      |    ✅     |        ✅        |
-| instagram posts & stories      |       ✅       |     ✅      |     ✅      |    ➖     |        ➖        |
-| instagram reels                |       ✅       |     ✅      |     ✅      |    ➖     |        ➖        |
+| instagram posts & reels        |       ✅       |     ✅      |     ✅      |    ➖     |        ➖        |
 | ok video                       |       ✅       |     ❌      |     ❌      |    ✅     |        ✅        |
 | pinterest                      |       ✅       |     ✅      |     ✅      |    ➖     |        ➖        |
 | reddit                         |       ✅       |     ✅      |     ✅      |    ❌     |        ❌        |
@@ -24,10 +24,10 @@
 | vk videos & clips              |       ✅       |     ❌      |     ❌      |    ✅     |        ✅        |
 | youtube videos, shorts & music |       ✅       |     ✅      |     ✅      |    ✅     |        ✅        |
 
-| emoji | meaning                 |
-|:-----:|:------------------------|
-|   ✅   | supported               |
-|   ➖   | impossible/unreasonable |
-|   ❌   | not supported           |
+|  emoji  | meaning                   |
+|:-------:|:--------------------------|
+|    ✅    | supported                 |
+|    ➖    | impossible/unreasonable   |
+|    ❌    | not supported             |
 
 # Made using the [Cobalt API](https://cobalt.tools) 
