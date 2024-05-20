@@ -72,8 +72,8 @@ function App() {
                 placeholder="Enter URL here:"
                 name="url"
             />
-            <button type="submit" onClick={() => handleSubmit(false,apiUrl)}>Download Video</button>
-            <button type="submit" onClick={() => handleSubmit(true,apiUrl)}>Download Audio</button>
+            <button type="submit" onClick={handleSubmit.bind(null,false,apiUrl)}>Download Video</button>
+            <button type="submit" onClick={handleSubmit.bind(null,true,apiUrl)}>Download Audio</button>
             {ErrorText === null && SuccessText === null ?
             <><br/><br/><Link to={'/download/supported/'} style={{textDecoration:"underline", color:"#05dcaa",fontSize:'20px'}}>See Supported Services</Link></>
             : null}
