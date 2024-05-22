@@ -31,7 +31,7 @@ export default defineConfig({
                         type: "image/png"
                     }],
                 name: "GreeningSiren's Download Center",
-                short_name: "GS's Download Center",
+                short_name: "GreeningSiren's Download Center",
             },
         })],
     base: "/download/"
