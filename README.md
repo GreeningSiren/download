@@ -9,7 +9,8 @@
 | bilibili.com & bilibili.tv     |       ✅       |     ✅      |     ✅      |    ➖     |        ➖        |
 | dailymotion                    |       ✅       |     ✅      |     ✅      |    ✅     |        ✅        |
 | instagram posts & reels        |       ✅       |     ✅      |     ✅      |    ➖     |        ➖        |
-| ok video                       |       ✅       |     ❌      |     ❌      |    ✅     |        ✅        |
+| loom                           |       ✅       |     ❌      |     ✅      |    ✅     |        ➖        |
+| ok video                       |       ✅       |     ❌      |     ✅      |    ✅     |        ✅        |
 | pinterest                      |       ✅       |     ✅      |     ✅      |    ➖     |        ➖        |
 | reddit                         |       ✅       |     ✅      |     ✅      |    ❌     |        ❌        |
 | rutube                         |       ✅       |     ✅      |     ✅      |    ✅     |        ✅        |
@@ -21,7 +22,7 @@
 | twitter/x                      |       ✅       |     ✅      |     ✅      |    ➖     |        ➖        |
 | vimeo                          |       ✅       |     ✅      |     ✅      |    ✅     |        ✅        |
 | vine archive                   |       ✅       |     ✅      |     ✅      |    ➖     |        ➖        |
-| vk videos & clips              |       ✅       |     ❌      |     ❌      |    ✅     |        ✅        |
+| vk videos & clips              |       ✅       |     ❌      |     ✅      |    ✅     |        ✅        |
 | youtube videos, shorts & music |       ✅       |     ✅      |     ✅      |    ✅     |        ✅        |
 
 | emoji | meaning                 |
