@@ -26,3 +26,7 @@ dist-ssr
 # Replit
 .replit
 replit.nix
+
+# Million Lint
+.million
+vite.config.ts.timestamp-*
