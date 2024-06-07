@@ -1,6 +1,8 @@
 ### GreeningSiren's
 
 # [DOWNLOAD CENTER](https://greeningsiren.github.io/download/)
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2FGreeningSiren%2Fdownload.svg?type=shield)](https://app.fossa.com/projects/git%2Bgithub.com%2FGreeningSiren%2Fdownload?ref=badge_shield)
+
 
 ## supported services
 
@@ -32,3 +34,7 @@
 |   ❌   | not supported           |
 
 # Made using the [Cobalt API](https://cobalt.tools)
+
+
+## License
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2FGreeningSiren%2Fdownload.svg?type=large)](https://app.fossa.com/projects/git%2Bgithub.com%2FGreeningSiren%2Fdownload?ref=badge_large)
