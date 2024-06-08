@@ -60,10 +60,10 @@ function App() {
             }
         }
     }
-    const sendRequestVideo = () => {
+    function sendRequestVideo() {
         handleSubmit(false, apiUrl);
     }
-    const sendRequestAudio = () => {
+    function sendRequestAudio() {
         handleSubmit(true, apiUrl);
     }
     return (
