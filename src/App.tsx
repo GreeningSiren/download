@@ -60,12 +60,6 @@ function App() {
             }
         }
     }
-    function sendRequestVideo() {
-        handleSubmit(false, apiUrl);
-    }
-    function sendRequestAudio() {
-        handleSubmit(true, apiUrl);
-    }
     return (
         <div>
             {/*<Link to={'/download/supported/'} style={{textDecoration: "none", color: "#05dcaa"}}>See Supported Services</Link>*/}
@@ -78,8 +72,8 @@ function App() {
                 placeholder="Enter URL here:"
                 name="url"
             />
-            <button type="submit" onClick={sendRequestVideo}>Download Video</button>
-            <button type="submit" onClick={sendRequestAudio}>Download Audio</button>
+            <button type="submit" onClick={async () => {await handleSubmit(false,apiUrl)}}>Download Video</button>
+            <button type="submit" onClick={async () => {await handleSubmit(true,apiUrl)}}>Download Audio</button>
             {ErrorText === null && SuccessText === null ?
             <><br/><br/><Link to={'/download/supported/'} style={{textDecoration:"underline", color:"#05dcaa",fontSize:'20px'}}>See Supported Services</Link></>
             : null}
