@@ -11,7 +11,7 @@ function App() {
     // const [responseUrl, setResponseUrl] = useState('');
     const [ErrorText, setErrorText] = useState<string | null>(null);
     const [SuccessText,setSuccessText] = useState<string | null>(null);
-    const apiUrl = 'https://co.wuk.sh/api/json';
+    const apiUrl = 'https://api.cobalt.tools/api/json';
     const alternativeApiUrl = 'https://cobalt.canine.tools/api/json';
     // let url = apiUrl
     const handleSubmit = async (isAudioOnly: boolean, endpointUrl: string) => {
