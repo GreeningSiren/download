@@ -113,3 +113,14 @@ h2 {
   margin-right: 12%;
   border: 2px dotted yellow;
 }
+
+footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background: rgb(36,36,36);
+  background: linear-gradient(180deg, rgba(36,36,36,1) 0%, rgba(24,24,24,1) 100%);
+  color: whitesmoke;
+  text-align: center;
+}

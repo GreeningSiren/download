@@ -66,7 +66,7 @@ function App() {
         }
     }
     return (
-        <div>
+        <>
             {/*<Link to={'/download/supported/'} style={{textDecoration: "none", color: "#05dcaa"}}>See Supported Services</Link>*/}
             <h2>GreeningSiren&apos;s</h2>
             <h1>Download Center</h1>
@@ -92,7 +92,10 @@ function App() {
             {SuccessText !== null &&
                 <h5 className="success">{HTMLReactParser(SuccessText)}</h5>
             }
-        </div>
+            <footer>
+                <p style={{fontSize: '17px'}}>Created with ❤️ using the  <a href='https://cobalt.tools' style={{color:'#25e69f'}}> cobalt api</a></p>
+            </footer>
+        </>
     );
 }
 
