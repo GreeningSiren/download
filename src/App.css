@@ -85,6 +85,9 @@ h2 {
   .success {
     font-size: 10px;
   }
+  .processing {
+    font-size: 10px;
+  }
 }
 
 .error {
@@ -101,4 +104,12 @@ h2 {
   margin-left: 12%;
   margin-right: 12%;
   border: 2px dotted limegreen;
+}
+
+.processing {
+  font-size: 25px;
+  color: yellow;
+  margin-left: 12%;
+  margin-right: 12%;
+  border: 2px dotted yellow;
 }

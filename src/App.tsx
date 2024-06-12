@@ -11,6 +11,7 @@ function App() {
     // const [responseUrl, setResponseUrl] = useState('');
     const [ErrorText, setErrorText] = useState<string | null>(null);
     const [SuccessText,setSuccessText] = useState<string | null>(null);
+    const [isProcessing, setIsProcessing] = useState<boolean>(false)
     const apiUrl = 'https://api.cobalt.tools/api/json';
     const alternativeApiUrl = 'https://cobalt.canine.tools/api/json';
     // let url = apiUrl
@@ -27,6 +28,7 @@ function App() {
             return;
         }
         try {
+            setIsProcessing(true);
             const response = await axios.post(
                 endpointUrl,
                 {url: inputValue, isAudioOnly, filenamePattern: "classic"},
@@ -37,6 +39,7 @@ function App() {
                     }
                 }
             );
+            setIsProcessing(false);
             setErrorText(null);
             const ResponseUrl = response.data.url;
             setSuccessText("✅Success✅<br><br>Download should start shortly!")
@@ -44,6 +47,7 @@ function App() {
             setInputValue('');
             setTimeout(() => {setSuccessText(null)}, 2000)
         } catch (error) {
+            
             // console.error('Error:', error);
             setSuccessText(null)
             if (endpointUrl === apiUrl) {
@@ -53,6 +57,7 @@ function App() {
                 setTimeout(async () => {await handleSubmit(isAudioOnly,alternativeApiUrl)},2500)
                 // await handleSubmit(isAudioOnly, alternativeApiUrl);
             }else{
+                setIsProcessing(false);
                 // @ts-expect-error Cuz error is bad ;(
                 setErrorText(`❌ERROR❌ <br><br> ${error.response.data.text} <br><br> ❌Alternate Server Failed!❌`);
                 setInputValue('');
@@ -78,6 +83,9 @@ function App() {
             <><br/><br/><Link to={'/download/supported/'} style={{textDecoration:"underline", color:"#05dcaa",fontSize:'20px'}}>See Supported Services</Link></>
             : null}
 
+            {isProcessing &&
+                <h5 className="processing">⌚PROCESSING⌚</h5>
+            }
             {ErrorText !== null &&
             <h5 className="error">{HTMLReactParser(ErrorText)}</h5>
             }
