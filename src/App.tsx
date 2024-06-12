@@ -43,9 +43,9 @@ function App() {
             setErrorText(null);
             const ResponseUrl = response.data.url;
             setSuccessText("✅Success✅<br><br>Download should start shortly!")
-            setTimeout(() => {window.open(ResponseUrl, '_self')}, 1200); // Open the URL in a new tab if not downloading audio
+            setTimeout(() => {window.open(ResponseUrl, '_self')}, 500); // Open the URL in a new tab if not downloading audio
             setInputValue('');
-            setTimeout(() => {setSuccessText(null)}, 2000)
+            setTimeout(() => {setSuccessText(null)}, 1200)
         } catch (error) {
             
             // console.error('Error:', error);
@@ -54,14 +54,14 @@ function App() {
                 // @ts-expect-error Cuz error is bad ;(
                 setErrorText(`❌ERROR❌ <br><br> ${error.response.data.text} <br><br> 🔁Trying Alternate Server!🔁`);
                 // console.log(error.response.data.text);
-                setTimeout(async () => {await handleSubmit(isAudioOnly,alternativeApiUrl)},2500)
+                setTimeout(async () => {await handleSubmit(isAudioOnly,alternativeApiUrl)},1500)
                 // await handleSubmit(isAudioOnly, alternativeApiUrl);
             }else{
                 setIsProcessing(false);
                 // @ts-expect-error Cuz error is bad ;(
                 setErrorText(`❌ERROR❌ <br><br> ${error.response.data.text} <br><br> ❌Alternate Server Failed!❌`);
                 setInputValue('');
-                setTimeout(() => {setErrorText(null)}, 2500)
+                setTimeout(() => {setErrorText(null)}, 1500)
             }
         }
     }
@@ -79,7 +79,7 @@ function App() {
             />
             <button type="submit" onClick={async () => {await handleSubmit(false,apiUrl)}}>Download Video</button>
             <button type="submit" onClick={async () => {await handleSubmit(true,apiUrl)}}>Download Audio</button>
-            {ErrorText === null && SuccessText === null ?
+            {ErrorText === null && SuccessText === null && !isProcessing ?
             <><br/><br/><Link to={'/download/supported/'} style={{textDecoration:"underline", color:"#05dcaa",fontSize:'20px'}}>See Supported Services</Link></>
             : null}
 
