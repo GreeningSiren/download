@@ -8,6 +8,7 @@ import './App.css'
 import {createBrowserRouter, RouterProvider} from 'react-router-dom'
 import SupportedServices from "./components/Supported.tsx";
 import ErrorElement from "./components/ErrorElement.tsx";
+import APIStatus from "./components/APIStatus.tsx";
 
 const router = createBrowserRouter([
     {
@@ -22,6 +23,10 @@ const router = createBrowserRouter([
     {
         path: '/download/supported/',
         element: <SupportedServices/>
+    },
+    {
+        path: '/download/serverStatus/',
+        element: <APIStatus />
     }
 ])
 ReactDOM.createRoot(document.getElementById('root')!).render(
