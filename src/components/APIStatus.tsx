@@ -48,7 +48,6 @@ export default function StatusPage(){
 
     return (
         <div>
-            <Link to={'/download/'} style={{color:'#05dcaa', fontSize: "20px"}}>Go back</Link>
             <h1>API Status</h1>
             <table style={{color:'whitesmoke',width: '100%',fontSize:'20px'}}>
                 <thead>
@@ -78,6 +77,8 @@ export default function StatusPage(){
                     )}
                 </tbody>
             </table>
+            <Link to={'/download/'} style={{color:'#05dcaa', fontSize: "20px"}}>Go Home</Link>
         </div>
+
     );
 };
