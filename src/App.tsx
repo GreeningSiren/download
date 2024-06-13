@@ -93,7 +93,7 @@ function App() {
                 <h5 className="success">{HTMLReactParser(SuccessText)}</h5>
             }
             <footer>
-                <p style={{fontSize: '17px'}}>Created with ❤️ using the  <a href='https://cobalt.tools' style={{color:'#25e69f'}}> cobalt api</a></p>
+                <p style={{fontSize: '17px'}}>Created with ❤️ using the  <a href='https://github.com/imputnet/cobalt/blob/current/docs%2Fapi.md' style={{color:'#25e69f'}}> cobalt api</a></p>
             </footer>
         </>
     );
