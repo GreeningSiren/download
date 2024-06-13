@@ -1,10 +1,10 @@
 import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom'
+import './APIStatus.css';
 interface ServiceStatus {
     name: string;
     version: number;
     branch: string;
-    startTime: number; // Use 'number' if the API returns a number
 }
 
 export default function StatusPage(){
@@ -43,41 +43,41 @@ export default function StatusPage(){
         fetchData();
     }, []); // The empty dependency array ensures this effect runs only once when the component mounts
 
-    if (loading) return <h2>Loading...</h2>;
+    if (loading) return <h1 style={{color:'whitesmoke'}}>Loading...</h1>;
     if (error) return <><Link to={'/download/'} style={{color:'#05dcaa', fontSize: "20px"}}>Go back</Link><br/><div>Error: {error.message}</div></>;
 
     return (
         <div>
             <h1>API Status</h1>
-            <table style={{color:'whitesmoke',width: '100%',fontSize:'20px'}}>
+            <table style={{color:'whitesmoke',width: '100%',fontSize:'20px'}} className='status-table'>
                 <thead>
                     <tr>
+                        <th>#</th>
                         <th>Name</th>
                         <th>Version</th>
                         <th>Branch</th>
-                        <th>Start Time</th>
                     </tr>
                 </thead>
                 <tbody>
                     {data1 && (
                         <tr>
+                            <td>1</td>
                             <td>{data1.name}</td>
                             <td>{data1.version}</td>
                             <td>{data1.branch}</td>
-                            <td>{data1.startTime}</td>
                         </tr>
                     )}
                     {data2 && (
                         <tr>
+                            <td>2</td>
                             <td>{data2.name}</td>
                             <td>{data2.version}</td>
                             <td>{data2.branch}</td>
-                            <td>{data2.startTime}</td>
                         </tr>
                     )}
                 </tbody>
             </table>
-            <Link to={'/download/'} style={{color:'#05dcaa', fontSize: "20px"}}>Go Home</Link>
+            <br/><Link to={'/download/'} style={{color:'#05dcaa', fontSize: "20px"}}>Go Home</Link>
         </div>
 
     );
