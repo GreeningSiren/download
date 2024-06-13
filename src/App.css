@@ -120,7 +120,7 @@ footer {
   bottom: 0;
   width: 100%;
   background: rgb(36,36,36);
-  background: linear-gradient(180deg, rgba(36,36,36,1) 0%, rgba(24,24,24,1) 100%);
+  background: linear-gradient(180deg, rgba(36,36,36,1) 0%, rgba(32,32,32,1) 50%, rgba(5,5,5,1) 100%);
   color: whitesmoke;
   text-align: center;
 }

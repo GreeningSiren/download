@@ -12,6 +12,7 @@ import ErrorElement from "./components/ErrorElement.tsx";
 const router = createBrowserRouter([
     {
         path:'/',
+        element: <ErrorElement/>,
         errorElement: <ErrorElement/>
     },
     {
