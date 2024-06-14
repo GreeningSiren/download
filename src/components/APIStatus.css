@@ -4,7 +4,7 @@
   }
   
   .status-table th, .status-table td {
-    border: 1px solid #000;
+    border: 1px solid #ddd;
     padding: 16px; /* Increase the padding to add more space between columns */
     text-align: center;
     background-color: #202024;
