@@ -44,7 +44,7 @@ export default function StatusPage(){
     }, []); // The empty dependency array ensures this effect runs only once when the component mounts
 
     if (loading) return <h1 style={{color:'whitesmoke'}}>Loading...</h1>;
-    if (error) return <><Link to={'/download/'} style={{color:'#05dcaa', fontSize: "20px"}}>Go back</Link><br/><div>Error: {error.message}</div></>;
+    if (error) return <><Link to={'/download/'} style={{color:'#05dcaa', fontSize: "20px"}}>Go Home</Link><br/><h1>Error: {error.message}</h1></>;
 
     return (
         <div>
