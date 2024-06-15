@@ -7,7 +7,7 @@ interface ServiceStatus {
     branch: string;
 }
 
-export default function StatusPage(){
+export default function StatusPage() {
     const [data1, setData1] = useState<ServiceStatus | null>(null);
     const [data2, setData2] = useState<ServiceStatus | null>(null);
     const [loading, setLoading] = useState(true);
@@ -28,6 +28,7 @@ export default function StatusPage(){
             } catch (err: unknown) {
                 if (err instanceof Error) {
                     setError(err);
+                    console.log(error)
                 } else {
                     setError(new Error('An unknown error occurred'));
                 }
@@ -38,12 +39,17 @@ export default function StatusPage(){
         fetchData();
     }, []); // The empty dependency array ensures this effect runs only once when the component mounts
 
-    if (error) return <><Link to={'/download/'} style={{color:'#05dcaa', fontSize: "20px"}}>Go Home</Link><br/><h1>Error: {error.message}</h1></>;
-
+    if(!data1 && !data2 && error) 
+        return <>
+        <h1>API Status</h1>
+        <h1>Error: {error.message}</h1>
+        <Link to={'/download/'} style={{color:'#05dcaa', fontSize: "20px"}}>Go Home</Link>
+        </>;
+    
     return (
         <div>
             <h1>API Status</h1>
-            <table style={{color:'whitesmoke',width: '100%',fontSize:'20px'}} className='status-table'>
+            <table style={{ color: 'whitesmoke', width: '100%', fontSize: '20px' }} className='status-table'>
                 <thead>
                     <tr>
                         <th>#</th>
@@ -53,30 +59,44 @@ export default function StatusPage(){
                     </tr>
                 </thead>
                 <tbody>
-                    {data1 && (
+                    {data1 ? (
                         <tr>
                             <td>1</td>
                             <td>{data1.name}</td>
                             <td>{data1.version}</td>
                             <td>{data1.branch}</td>
                         </tr>
-                    )}
-                    
-                    {data2 && (
+                    ) :
+                        <tr>
+                            <td>1</td>
+                            <td>Failed</td>
+                            <td>To</td>
+                            <td>Connect</td>
+                        </tr>
+                    }
+
+                    {data2 ? (
                         <tr>
                             <td>2</td>
                             <td>{data2.name}</td>
                             <td>{data2.version}</td>
                             <td>{data2.branch}</td>
                         </tr>
-                    )}
+                    ) :
+                        <tr>
+                            <td>2</td>
+                            <td>Failed</td>
+                            <td>To</td>
+                            <td>Connect</td>
+                        </tr>
+                    }
                 </tbody>
             </table>
-            <br/>
-                {loading &&
+            <br />
+            {loading &&
                 <h2>Loading...</h2>
-                }
-            <br/><Link to={'/download/'} style={{color:'#05dcaa', fontSize: "20px"}}>Go Home</Link>
+            }
+            <br /><Link to={'/download/'} style={{ color: '#05dcaa', fontSize: "20px" }}>Go Home</Link>
         </div>
 
     );
