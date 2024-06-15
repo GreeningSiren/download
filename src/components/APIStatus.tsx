@@ -17,18 +17,13 @@ export default function StatusPage(){
         const fetchData = async () => {
             try {
                 const response1 = await fetch('https://api.cobalt.tools/api/serverInfo');
-                const response2 = await fetch('https://cobalt.canine.tools/api/serverInfo');
-
-
-                if (!response1.ok || !response2.ok) {
-                    throw new Error("Couldn't get response from API");
-                }
-
                 const result1 = await response1.json();
-                const result2 = await response2.json();
-
                 setData1(result1);
+
+                const response2 = await fetch('https://cobalt.canine.tools/api/serverInfo');
+                const result2 = await response2.json();
                 setData2(result2);
+
                 setLoading(false);
             } catch (err: unknown) {
                 if (err instanceof Error) {
@@ -43,7 +38,6 @@ export default function StatusPage(){
         fetchData();
     }, []); // The empty dependency array ensures this effect runs only once when the component mounts
 
-    if (loading) return <h1 style={{color:'whitesmoke'}}>Loading...</h1>;
     if (error) return <><Link to={'/download/'} style={{color:'#05dcaa', fontSize: "20px"}}>Go Home</Link><br/><h1>Error: {error.message}</h1></>;
 
     return (
@@ -67,6 +61,7 @@ export default function StatusPage(){
                             <td>{data1.branch}</td>
                         </tr>
                     )}
+                    
                     {data2 && (
                         <tr>
                             <td>2</td>
@@ -77,6 +72,10 @@ export default function StatusPage(){
                     )}
                 </tbody>
             </table>
+            <br/>
+                {loading &&
+                <h2>Loading...</h2>
+                }
             <br/><Link to={'/download/'} style={{color:'#05dcaa', fontSize: "20px"}}>Go Home</Link>
         </div>
 
