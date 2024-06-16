@@ -69,9 +69,9 @@ export default function StatusPage() {
                     ) :
                         <tr>
                             <td>1</td>
-                            <td>Failed</td>
-                            <td>To</td>
-                            <td>Connect</td>
+                            <td>???</td>
+                            <td>???</td>
+                            <td>???</td>
                         </tr>
                     }
 
@@ -85,9 +85,9 @@ export default function StatusPage() {
                     ) :
                         <tr>
                             <td>2</td>
-                            <td>Failed</td>
-                            <td>To</td>
-                            <td>Connect</td>
+                            <td>???</td>
+                            <td>???</td>
+                            <td>???</td>
                         </tr>
                     }
                 </tbody>
