@@ -34,7 +34,7 @@ export default defineConfig({
           },
         ],
         name: "GreeningSiren's Download Center",
-        short_name: "GreeningSiren's Download Center",
+        short_name: "Download Center",
       },
     }),
     million.vite({ auto: true }),
