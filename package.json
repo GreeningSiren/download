@@ -13,16 +13,13 @@
   "dependencies": {
     "@million/lint": "^1.0.0-rc.18",
     "axios": "^1.6.8",
-    "bootstrap": "^5.3.3",
     "html-react-parser": "^5.1.10",
     "million": "^3.1.11",
     "react": "^18.2.0",
-    "react-bootstrap": "^2.10.2",
     "react-dom": "^18.2.0",
     "react-markdown": "^9.0.1",
     "react-router-dom": "^6.23.1",
-    "remark-gfm": "^4.0.0",
-    "vite-plugin-pwa": "^0.20.0"
+    "remark-gfm": "^4.0.0"
   },
   "devDependencies": {
     "@types/react": "^18.2.66",
@@ -34,6 +31,7 @@
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-react-refresh": "^0.4.6",
     "typescript": "^5.2.2",
-    "vite": "^5.3.0"
+    "vite": "^5.3.0",
+    "vite-plugin-pwa": "^0.20.0"
   }
 }
