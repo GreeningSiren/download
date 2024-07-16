@@ -47,7 +47,7 @@ function App() {
             setInputValue('');
             setTimeout(() => {setSuccessText(null)}, 1200)
         } catch (error) {
-            
+
             // console.error('Error:', error);
             setSuccessText(null)
             if (endpointUrl === apiUrl) {

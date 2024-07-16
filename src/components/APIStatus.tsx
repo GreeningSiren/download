@@ -37,15 +37,16 @@ export default function StatusPage() {
         };
 
         fetchData();
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []); // The empty dependency array ensures this effect runs only once when the component mounts
 
-    if(!data1 && !data2 && error) 
+    if(!data1 && !data2 && error)
         return <>
         <h1>API Status</h1>
         <h1>Error: {error.message}</h1>
         <Link to={'/download/'} style={{color:'#05dcaa', fontSize: "20px"}}>Go Home</Link>
         </>;
-    
+
     return (
         <div>
             <h1>API Status</h1>
