@@ -20,7 +20,7 @@ export default function StatusPage() {
                 const result1 = await response1.json();
                 setData1(result1);
 
-                const response2 = await fetch('https://cobalt.canine.tools/api/serverInfo');
+                const response2 = await fetch('https://downloadapi.stuff.solutions/api/serverInfo');
                 const result2 = await response2.json();
                 setData2(result2);
 

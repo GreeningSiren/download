@@ -9,7 +9,7 @@ function App() {
     const [SuccessText, setSuccessText] = useState<string | null>(null);
     const [isProcessing, setIsProcessing] = useState<boolean>(false);
     const apiUrl = 'https://api.cobalt.tools/api/json';
-    const alternativeApiUrl = 'https://cobalt.canine.tools/api/json';
+    const alternativeApiUrl = 'https://downloadapi.stuff.solutions/api/json';
 
     const linkStyle = useMemo(() => ({
         textDecoration: "underline",
