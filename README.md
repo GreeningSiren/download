@@ -1,3 +1,12 @@
+> [!IMPORTANT]
+> **Archive Notice**
+> 
+> This repository has been archived as of 6/11/24 due to recent changes in the Cobalt API.
+> 
+> The modifications to the Cobalt API have impacted the functionality of this project, and as a result, no further updates or maintenance will be provided.
+> For continued development, please consider using the alternative repository at [`imputnet/cobalt`](https://github.com/imputnet/cobalt).
+
+
 ### GreeningSiren's
 
 # [DOWNLOAD CENTER](https://greeningsiren.github.io/download/)
